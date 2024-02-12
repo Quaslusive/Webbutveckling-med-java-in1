@@ -34,7 +34,7 @@ public class AttendanceServlets extends HttpServlet {
         ArrayList<String> attendance = MysqlConnector.attendance();
         for(String attendanceInfo : attendance ){
             String[] fields = attendanceInfo.split(",");
-            out.println("<tr><td>"+fields[0]+" "+fields[1]+"</td><td>"+fields[2]+"</td></tr>");
+            out.println("<tr><td>" + fields[0] + " " + fields[1] + "</td><td>" + fields[2] + "</td></tr>");
         }
         out.println("</table>");
         out.println("</div>");
