@@ -34,8 +34,8 @@ public class CoursesServlets extends HttpServlet {
         out.println("</table>");
         out.println("</div>");
         out.println("<br>");
-        out.println("<a href= \"kurser\">kurser</a>");
-        out.println("<a href= \"studenter\">studenter</a>");
+        out.println("<a href= narvaro>narvaro</a>");
+        out.println("<a href= studenter>studenter</a>");
         out.println("</body>");
         out.println("</html>");
         out.close();

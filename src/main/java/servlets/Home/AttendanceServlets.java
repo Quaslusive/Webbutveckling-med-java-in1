@@ -35,8 +35,8 @@ public class AttendanceServlets extends HttpServlet {
         out.println("</div>");
         out.println("<br>");
         out.println("</body>");
-        out.println("<a href= http://localhost:8080/kurser> Courses</a>");
-        out.println("<a href= http://localhost:8080/Students> Students</a>");
+        out.println("<a href= kurser>kurser</a>");
+        out.println("<a href= studenter>studenter</a>");
         out.println("</body>");
         out.println("</html>");
 
