@@ -3,6 +3,7 @@ package models;
 import java.sql.*;
 import java.util.ArrayList;
 import javax.sql.DataSource;
+
 import com.mysql.cj.jdbc.MysqlDataSource;
 
 public class MysqlConnector {
@@ -60,23 +61,14 @@ public class MysqlConnector {
     public static ArrayList<String> attendance() {
         ArrayList<String> attendanceList = new ArrayList<>();
         try (Connection conn = dataSource.getConnection();
-             /*
-             PreparedStatement statement = conn.prepareStatement(
-                     "SELECT students.fname, students.lname, courses.name " +
-                     "FROM attendance " +
-                     "JOIN students ON attendance.studentsID = students.id " +
-                     "JOIN courses ON attendance.coursesID = courses.id " +
-                     "ORDER BY students.id ASC");
 
-              */
-             PreparedStatement statement = conn.prepareStatement("SELECT s.fname, s.lname, c.name FROM students s JOIN attendance a ON s.id = a.studentID JOIN courses c ON a.courseID = c.id ORDER BY s.id ASC; "
-             );
+             PreparedStatement statement = conn.prepareStatement(
+                     "SELECT s.fname, s.lname, c.name FROM students s JOIN attendance a ON s.id = a.studentID " +
+                             "JOIN courses c ON a.courseID = c.id ORDER BY a.id ASC;");
              ResultSet rs = statement.executeQuery()) {
 
             while (rs.next()) {
                 String attendanceInfo = rs.getString("fname") + "," + rs.getString("lname") + "," + rs.getString("name");
-              //  String attendanceInfo = rs.getString("studentsID") + "," + rs.getString("coursesID");
-
                 attendanceList.add(attendanceInfo);
             }
         } catch (SQLException ex) {

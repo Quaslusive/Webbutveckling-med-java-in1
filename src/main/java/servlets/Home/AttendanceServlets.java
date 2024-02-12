@@ -17,16 +17,11 @@ public class AttendanceServlets extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         out.println("<html>");
-        out.println("<head><title>Närvaro List</title></head>");
-        out.println("<style>");
-        out.println("table {border-collapse: collapse; width: 100%;}");
-        out.println("td,\n" +
-                "        th {\n" +
-                "            border: 1px solid #000000;\n" +
-                "            text-align: left;\n" +
-                "            padding: 8px;\n" +
-                "        }");
-        out.println("</style>");
+        out.println("<head><title>Attendance Info List </title>");
+        out.println("<link rel=stylesheet type=text/css href=style.css />");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Veporvere School of Crindge Awsomness </h1>");
         out.println("<h2> Attendance List </h2>");
         out.println("<div id=\"data-table\">");
         out.println("<table border=\"1\">");
