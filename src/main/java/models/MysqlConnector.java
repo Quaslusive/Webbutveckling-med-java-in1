@@ -68,7 +68,8 @@ public class MysqlConnector {
              ResultSet rs = statement.executeQuery()) {
 
             while (rs.next()) {
-                String attendanceInfo = rs.getString("fname") + "," + rs.getString("lname") + "," + rs.getString("name");
+                String attendanceInfo = rs.getString("fname") + "," + rs.getString("lname") + ","
+                        + rs.getString("name");
                 attendanceList.add(attendanceInfo);
             }
         } catch (SQLException ex) {
