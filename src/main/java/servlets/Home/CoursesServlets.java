@@ -46,8 +46,8 @@ public class CoursesServlets extends HttpServlet {
         out.println("<tr><th>Name</th><th>YHP</th><th>Info</th></tr>");
         ArrayList<String> courses = MysqlConnector.courses();
         for(String coursesInfo : courses){
-            String[] fields = coursesInfo.split(",");
-            out.println("<tr><td>"+fields[0]+"</td><td>"+fields[1]+"</td><td>"+fields[2]+"</td></tr>");
+            String[] cells = coursesInfo.split(",");
+            out.println("<tr><td>"+cells[0]+"</td><td>"+cells[1]+"</td><td>"+cells[2]+"</td></tr>");
         }
         out.println("</table>");
         out.println("</div>");

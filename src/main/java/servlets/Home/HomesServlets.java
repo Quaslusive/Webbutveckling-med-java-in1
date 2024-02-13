@@ -18,7 +18,7 @@ public class HomesServlets extends HttpServlet {
 
         PrintWriter out = resp.getWriter();
         out.println("<html>");
-        out.println("<head><title>Veporwere School of Awesomeness</title>");
+        out.println("<head><title>The Academy of Vaporware</title>");
         out.println("<link rel=stylesheet type=text/css href=style.css />");
         out.println("</head>");
         out.println("<body>");
@@ -34,9 +34,8 @@ public class HomesServlets extends HttpServlet {
         out.println("</nav>");
         out.println("</header>");
 
-
         out.println("<div class=top-titel fadeInAnimation >");
-        out.println("<h1>Veporwere School of Awesomeness</h1>");
+        out.println("<h1>The Academy of Vaporware</h1>");
         out.println("</div>");
 
         out.println("<main>");
