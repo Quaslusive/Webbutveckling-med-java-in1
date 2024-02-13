@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet(urlPatterns = "/home")
+@WebServlet(name = "home", urlPatterns = "/home")
 public class HomesServlets extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,25 +26,50 @@ public class HomesServlets extends HttpServlet {
         out.println("<header>");
         out.println("<nav>");
         out.println("<ul>");
-        out.println("<li><a href= kurser> Kurser</a></li>");
-        out.println("<li><a href= studenter> Studenter</a>");
-        out.println("<li><a href= narvaro> Närvaro</a>");
+        out.println("<li><a href= narvaro>| Närvaro |</a></li>");
+        out.println("<li><a href= kurser>| Kurser |</a></li>");
+        out.println("<li><a href= studenter>| Studenter |</a>");
         out.println("</ul>");
         out.println("</nav>");
         out.println("</header>");
 
         out.println("<br>");
 
-        out.println("<div >");
+        out.println("<div class=top-titel fadeInAnimation >");
         out.println("<h1>Veporwere School of Awesomeness</h1>");
         out.println("</div>");
 
-        out.println("<h2> Attendance List</h2>");
-        out.println("<main>");
 
+        out.println("<main>");
+        out.println("<h1> School Info </h1>");
+        out.println("<span id=spacer></span>");
+
+        out.println("<section id=om_oss-p>");
+
+        out.println("<h2> Vår Historia <h2>");
+        out.println("<p>");
+        out.println("Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae velit consectetur corrupti inventore fugit.");
+        out.println("earum porro consequuntur error veritatis, velit cupiditate hic itaque! Totam molestiae blanditiis nesciunt");
+        out.println("deserunt voluptates.");
+        out.println("Facere beatae impedit expedita nam illo accusamus, eveniet nihil vitae id? Veniam atque quae laboriosam ab in,");
+        out.println("eserunt eaque necessitatibus eius libero earum? Accusamus, molestias error. Ullam quia quasi in.");
+        out.println("</p>");
+
+        out.println("</section>");
+        out.println("<section id=om_oss-p>");
+        out.println("<h2> Nu och Framtiden<h2>");
+        out.println("<p>");
+        out.println("Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae velit consectetur corrupti inventore fugit.");
+        out.println("earum porro consequuntur error veritatis, velit cupiditate hic itaque! Totam molestiae blanditiis nesciunt");
+        out.println("deserunt voluptates.");
+        out.println("Facere beatae impedit expedita nam illo accusamus, eveniet nihil vitae id? Veniam atque quae laboriosam ab in,");
+        out.println("eserunt eaque necessitatibus eius libero earum? Accusamus, molestias error. Ullam quia quasi in.");
+        out.println("</p>");
+
+        out.println("</section>");
         out.println("</main>");
         out.println("<br>");
-        out.println("</body>");
+
         out.println("</body>");
         out.println("</html>");
 
