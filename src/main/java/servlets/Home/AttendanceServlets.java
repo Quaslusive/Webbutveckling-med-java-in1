@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet(name ="atd", urlPatterns = "/attendance")
+@WebServlet(name = "atd", urlPatterns = "/attendance")
 public class AttendanceServlets extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -44,7 +44,7 @@ public class AttendanceServlets extends HttpServlet {
         out.println("<table border=1>");
         out.println("<tr><th>Name</th><th>Courses</th></tr>");
         ArrayList<String> attendance = MysqlConnector.attendance();
-        for(String attendanceInfo : attendance ){
+        for (String attendanceInfo : attendance) {
             String[] cells = attendanceInfo.split(",");
             out.println("<tr><td>" + cells[0] + " " + cells[1] + "</td><td>" + cells[2] + "</td></tr>");
         }
