@@ -56,6 +56,20 @@ body {
     font-size: 0.5rem;
   }
 }
+table {
+table-layout: auto;
+  width: 70%;
+  margin: 20px auto; /* Center horizontally */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+th {
+  background-color: #750371;
+
+}
+
 
 button {
   padding: 2%;

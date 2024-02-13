@@ -26,19 +26,18 @@ public class HomesServlets extends HttpServlet {
         out.println("<header>");
         out.println("<nav>");
         out.println("<ul>");
-        out.println("<li><a href= narvaro>| Närvaro |</a></li>");
-        out.println("<li><a href= kurser>| Kurser |</a></li>");
-        out.println("<li><a href= studenter>| Studenter |</a>");
+        out.println("<li><a href= home>| Home |</a></li>");
+        out.println("<li><a href= courses>| Courses |</a></li>");
+        out.println("<li><a href= students>| Students |</a>");
+        out.println("<li><a href= attendance>| Attendance |</a></li>");
         out.println("</ul>");
         out.println("</nav>");
         out.println("</header>");
 
         out.println("<br>");
-
         out.println("<div class=top-titel fadeInAnimation >");
         out.println("<h1>Veporwere School of Awesomeness</h1>");
         out.println("</div>");
-
 
         out.println("<main>");
         out.println("<h1> School Info </h1>");

@@ -11,35 +11,34 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet(urlPatterns = "/narvaro")
+@WebServlet(name ="atd", urlPatterns = "/attendance")
 public class AttendanceServlets extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         PrintWriter out = resp.getWriter();
         out.println("<html>");
-        out.println("<head><title>Attendance Info List </title>");
+        out.println("<head><title>Attendance Info</title>");
         out.println("<link rel=stylesheet type=text/css href=style.css />");
         out.println("</head>");
         out.println("<body>");
 
         out.println("<header>");
-
         out.println("<nav>");
         out.println("<ul>");
         out.println("<li><a href= home>| Home |</a></li>");
-        out.println("<li><a href= kurser>| Kurser |</a></li>");
-        out.println("<li><a href= studenter>| Studenter |</a>");
+        out.println("<li><a href= courses>| Courses |</a></li>");
+        out.println("<li><a href= students>| Students |</a>");
+        out.println("<li><a href= attendance>| Attendance |</a></li>");
         out.println("</ul>");
         out.println("</nav>");
-
         out.println("</header>");
+
         out.println("<br>");
-        out.println("<div >");
-        out.println("<h1 >Veporwere School of Awesomeness</h1>");
+        out.println("<div class=top-titel fadeInAnimation >");
+        out.println("<h1>Attendance List</h1>");
         out.println("</div>");
 
-        out.println("<h2> Attendance List </h2>");
         out.println("<main>");
         out.println("<div id=data-table>");
         out.println("<table border=1>");

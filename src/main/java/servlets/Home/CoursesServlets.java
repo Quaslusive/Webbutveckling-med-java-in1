@@ -11,33 +11,38 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-@WebServlet(urlPatterns = "/kurser")
+@WebServlet(urlPatterns = "/courses")
 public class CoursesServlets extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
         out.println("<html>");
-        out.println("<head><title>Courses List</title>");
-        out.println("<link rel=stylesheet type=text/css href=styleCourses.css />");
+        out.println("<head><title>Courses Info</title>");
+        out.println("<link rel=stylesheet type=text/css href=style.css />");
         out.println("</head>");
         out.println("<body>");
-        out.println("<header>");
 
+        out.println("<header>");
         out.println("<nav>");
         out.println("<ul>");
         out.println("<li><a href= home>| Home |</a></li>");
-        out.println("<li><a href= kurser>| Kurser |</a></li>");
-        out.println("<li><a href= studenter>| Studenter |</a>");
+        out.println("<li><a href= courses>| Courses |</a></li>");
+        out.println("<li><a href= students>| Students |</a>");
+        out.println("<li><a href= attendance>| Attendance |</a></li>");
         out.println("</ul>");
         out.println("</nav>");
-
         out.println("</header>");
 
-        out.println("<h2> Courses List test </h2>");
+        out.println("<br>");
+        out.println("<div class=top-titel fadeInAnimation >");
+        out.println("<h1>Courses List</h1>");
+        out.println("</div>");
+
         out.println("<main>");
-        out.println("<div>");
-        out.println("<table>");
+        out.println("<div id=data-table>");
+        out.println("<table border=1>");
         out.println("<tr><th>Name</th><th>YHP</th><th>Info</th></tr>");
         ArrayList<String> courses = MysqlConnector.courses();
         for(String coursesInfo : courses){
@@ -50,6 +55,7 @@ public class CoursesServlets extends HttpServlet {
         out.println("<br>");
         out.println("</body>");
         out.println("</html>");
+
         out.close();
 
         System.out.println("Get request courses ");
