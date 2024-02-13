@@ -21,10 +21,26 @@ public class AttendanceServlets extends HttpServlet {
         out.println("<link rel=stylesheet type=text/css href=style.css />");
         out.println("</head>");
         out.println("<body>");
-        out.println("<h1>Veporvere School of Crindge Awsomness </h1>");
+
+        out.println("<header>");
+
+        out.println("<nav>");
+        out.println("<ul>");
+        out.println("<li><a href= kurser> Kurser</a></li>");
+        out.println("<li><a href= studenter> Studenter</a>");
+        out.println("</ul>");
+        out.println("</nav>");
+
+        out.println("</header>");
+        out.println("<br>");
+        out.println("<div >");
+        out.println("<h1 >Veporwere School of Awesomeness</h1>");
+        out.println("</div>");
+
         out.println("<h2> Attendance List </h2>");
-        out.println("<div id=\"data-table\">");
-        out.println("<table border=\"1\">");
+        out.println("<main>");
+        out.println("<div id=data-table>");
+        out.println("<table border=1>");
         out.println("<tr><th>Name</th><th>Course</th></tr>");
         ArrayList<String> attendance = MysqlConnector.attendance();
         for(String attendanceInfo : attendance ){
@@ -33,10 +49,9 @@ public class AttendanceServlets extends HttpServlet {
         }
         out.println("</table>");
         out.println("</div>");
+        out.println("</main>");
         out.println("<br>");
         out.println("</body>");
-        out.println("<a href= kurser>kurser</a>");
-        out.println("<a href= studenter>studenter</a>");
         out.println("</body>");
         out.println("</html>");
 

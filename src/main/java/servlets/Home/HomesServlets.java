@@ -13,7 +13,7 @@ public class HomesServlets extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String top =
-                "<head><title>Hello " + req.getParameter("name") +  "</title></head>"
+                "<head><title>Hello</title></head>"
                 + "<body>"
                 + "<nav>"
                 +   "<a href=/>HOME</a>"
@@ -30,11 +30,5 @@ public class HomesServlets extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println(top);
         out.println(bottom);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        super.doPost(req, resp);
     }
 }

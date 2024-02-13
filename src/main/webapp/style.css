@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://preview.redd.it/0bb6dqsiab451.gif?s=b0c65596a54a30708da26669da6e79abf3be1680);
+    background-image: url(0bb6dqsiab451.gif);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -19,9 +19,8 @@ body {
 main {
     display: flex;
     position: relative;
-    flex-direction: column;
     margin-top: 50px;
-    margin: 0 auto;
+    margin: 20px ;
     padding: 3%;
     height: max-content;
     width: 80%;
@@ -36,15 +35,16 @@ main {
 
 }
 
-    table {
-        width: 70%;
-        border-collapse: collapse;
-        margin-bottom: 20px; }
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
 
-th, td {
+th {
     border: 1px solid black;
-    padding: 8px; text-align: left;
-    background: #4e12da;
+    padding: 8px;
+    text-align: left;
 }
 
 td {
@@ -68,6 +68,7 @@ button {
     text-shadow: 0 0 3px #ff0000, 0 0 5px #d9ed00;
     margin: 3%;
 }
+
 button:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -78,6 +79,7 @@ button:focus-visible {
     color: #0b0113;
     background-color: #ffffff;
 }
+
 header {
     display: flex;
     position: fixed;
@@ -99,7 +101,7 @@ nav li {
     display: inline-block;
     justify-content: center;
     list-style: none;
-    padding:  20px;
+    padding: 20px;
     font-family: "Notable";
 }
 
@@ -115,6 +117,7 @@ nav li a:hover {
     transition: all 0.4s ease 0s;
     filter: drop-shadow(0.25rem 0 0.75rem #f07400);
 }
+
 nav li a:focus-visible {
     color: #0b0113;
     background-color: #ffffff;

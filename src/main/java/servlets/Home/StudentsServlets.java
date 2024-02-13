@@ -24,21 +24,31 @@ public class StudentsServlets extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
 
+        out.println("<header>");
+
+        out.println("<nav>");
+        out.println("<ul>");
+        out.println("<li><a href= kurser> Kurser</a></li>");
+        out.println("<li><a href= narvaro> Närvaro</a>");
+        out.println("</ul>");
+        out.println("</nav>");
+
+        out.println("</header>");
+
         out.println("<h2> Students List test</h2>");
+        out.println("<main>");
         out.println("<div id=data-table>");
-        out.println("<table border=0>");
+        out.println("<table border=1>");
         out.println("<tr><th>Name</th><th>City</th><th>Hobbies</th></tr>");
         ArrayList<String> students = MysqlConnector.students();
         for (String studentInfo : students) {
             String[] fields = studentInfo.split(",");
             out.println("<tr><td>" + fields[0] + " " + fields[1] + "</td><td>" + fields[2] + "</td><td>" + fields[3] + "</td></tr>");
         }
-
         out.println("</table>");
         out.println("</div>");
+        out.println("</main>");
         out.println("<br>");
-        out.println("<a href= kurser>kurser</a>");
-        out.println("<a href= narvaro>narvaro</a>");
         out.println("</body>");
         out.println("</html>");
 
