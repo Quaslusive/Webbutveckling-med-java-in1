@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class AttendanceServlets extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         PrintWriter out = resp.getWriter();
         out.println("<html>");
         out.println("<head><title>Attendance Info List </title>");

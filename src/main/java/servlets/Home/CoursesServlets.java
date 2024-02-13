@@ -52,6 +52,5 @@ public class CoursesServlets extends HttpServlet {
         out.close();
 
         System.out.println("Get request courses ");
-
     }
 }
